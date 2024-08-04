@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Beijo do noivo",
+    "value": 1.99,
+    "img": "/images/"
+  },
+  {
+    "name": "Horta do noivo",
+    "value": 4.20,
+    "img": "/images/horta.jpg"
+  },
+  {
+    "name": "Vaquinha para quitar a Arena Corinthians",
+    "value": 5.00,
+    "img": "/images/vaquinha-arena-corinthians.jpg"
+  },
+  {
+    "name": "Chamyto do noivo",
+    "value": 10.00,
+    "img": "/images/chamyto.png"
+  },
+  {
+    "name": "Engov para os noivos",
+    "value": 15.00,
+    "img": "/images/engov.jpg"
+  },
+  {
+    "name": "Chocolate para TPM da noiva",
+    "value": 25.00,
+    "img": "/images/chocolate-tpm.png"
+  },
+  {
+    "name": "Skin de LOL para o noivo",
+    "value": 30.00,
+    "img": "/images/"
+  },
+  {
+    "name": "Brinquedos para o futuro filho de 4 patas",
+    "value": 40.00,
+    "img": "/images/dog.png"
+  },
+  {
+    "name": "Fardinho de corona",
+    "value": 45.00,
+    "img": "/images/fardinho-de-corona.png"
+  },
+  {
+    "name": "Calmante para a noiva",
+    "value": 50.00,
+    "img": "/images/calmante.png"
+  },
+  {
+    "name": "Mundial do Palmeiras",
+    "value": 51.00,
+    "img": "/images/mundial-porcada.png"
+  },
+  {
+    "name": "Capacete para o noivo caso o calmante não funcione",
+    "value": 60.00,
+    "img": "/images/capacete.jpg"
+  },
+  {
+    "name": "Suborno para ganhar o buquê",
+    "value": 80.00,
+    "img": "/images/suborno-buquê.jpg"
+  },
+  {
+    "name": "Show do Zeca Pagodinho",
+    "value": 84.90,
+    "img": "/images/zeca-pagodinho.jpg"
+  },
+  {
+    "name": "Mensalidade da academia para o noivo",
+    "value": 85.00,
+    "img": "/images/mensalidade-da-academia.png"
+  },
+  {
+    "name": "Tampões de ouvido para a noiva aguentar o noivo tagarela",
+    "value": 90.00,
+    "img": "/images/tampoes-de-ouvido.jpg"
+  },
+  {
+    "name": "Whey do noivo",
+    "value": 100.00,
+    "img": "/images/whey.jpg"
+  },
+  {
+    "name": "Mensalidade do Chat GPT para o noivo trabalhar",
+    "value": 120.00,
+    "img": "/images/chatgpt.jfif"
+  },
+  {
+    "name": "Cruzeiro do Neymar",
+    "value": 150.00,
+    "img": "/images/cruzeiro-ney.png"
+  },
+  {
+    "name": "Doce de panetone para o noivo",
+    "value": 180.00,
+    "img": "/images/doce-de-panetone.png"
+  },
+  {
+    "name": "Camisa nova do Corinthians",
+    "value": 199.90,
+    "img": "/images/camisa-corinthians.jpg"
+  },
+  {
+    "name": "TV de tubo para a sala",
+    "value": 200.00,
+    "img": "/images/tv-tubo.png"
+  },
+  {
+    "name": "Viagem ao Itaquerão",
+    "value": 250.00,
+    "img": "/images/viagem-itaquera.png"
+  },
+  {
+    "name": "Vaquinha para comprar a Kombi",
+    "value": 270.00,
+    "img": "/images/vaquinha-kombi.png"
+  },
+  {
+    "name": "Um ano de correção de provas para a noiva",
+    "value": 300.00,
+    "img": "/images/correcao-provas.jpg"
+  },
+  {
+    "name": "Lingerie chic",
+    "value": 320.00,
+    "img": "/images/lingerie.jpg"
+  },
+  {
+    "name": "Ajuda com os alugueis atrasados",
+    "value": 350.00,
+    "img": "/images/aluguel-atrasado.jpg"
+  },
+  {
+    "name": "Cueca nova",
+    "value": 400.00,
+    "img": "/images/cueca-nova.jpg"
+  },
+  {
+    "name": "Ajuda na compra da casinha",
+    "value": 500.00,
+    "img": "/images/casinha.jpg"
+  },
+  {
+    "name": "Presente misterioso",
+    "value": "?",
+    "img": "/images/presente-misterioso.png"
+  }
+]
