@@ -43,23 +43,25 @@ export function Home() {
     return () => clearInterval(timer)
   }, [])
   return (
-    <div className="">
-      <h1>Contagem Regresiva</h1>
+    <div className="w-max-[1360px] flex flex-col justify-center px-2">
+      <h1 className="font-bold  mobile:text-5xl text-4xl text-center">
+        Contagem Regresiva
+      </h1>
 
-      <div className="flex justify-center items-center gap-10 mt-8">
-        <div className="size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
+      <div className="flex  mobile:justify-center items-center lg:gap-10 mt-8 gap-8 ">
+        <div className="size-20 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
           <p className="text-3xl">{timeLeft.days}</p>
           <span className="uppercase text-sm">Dias</span>
         </div>
-        <div className="size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
+        <div className="size-20 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
           <p className="text-3xl">{timeLeft.hours}</p>
           <span className="uppercase text-sm">Horas</span>
         </div>
-        <div className="size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
+        <div className="size-20 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
           <p className="text-3xl">{timeLeft.minutes}</p>
           <span className="uppercase text-sm">Minutos</span>
         </div>
-        <div className="size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
+        <div className="size-20 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
           <p className="text-3xl">{timeLeft.seconds}</p>
           <span className="uppercase text-sm">Segundos</span>
         </div>

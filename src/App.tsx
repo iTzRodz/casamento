@@ -6,7 +6,7 @@ import { ConfirmPresenca } from './components/form/Presenca'
 
 function App() {
   return (
-    <main className="w-full h-full max-w-[1360px] flex flex-col">
+    <main className="w-full h-full max-w-[1360px] flex flex-col gap-20 antialiased">
       <Header />
       <Home />
       <ListItens />
