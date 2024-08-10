@@ -14,32 +14,38 @@ export function ListItens() {
   }, [])
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:grid-cols-3 lg:gap-5 p-4 max-w-[1280px]">
-      {itens.map((item, index) => (
-        <div
-          key={index}
-          className="rounded-lg bg-[#1a1a1a] flex flex-col justify-center items-center p-4"
-        >
-          <img
-            src={item.img}
-            alt={item.name}
-            height={206}
-            width={206}
-            className="size-full rounded-md  bg-center bg-no-repeat bg-cover "
-          />
-          <h3 className="text-sm font-semibold mt-10">{item.name}</h3>
-          <h3>
-            {item.value.toLocaleString('pt-BR', {
-              style: 'currency',
-              currency: 'BRL',
-            })}
-          </h3>
+    <div className="flex flex-col gap-20">
+      <div className="grid grid-cols-1 gap-10 mobile:grid-cols-2 ipad:grid-cols-3 laptop:grid-cols-4 ">
+        {itens.map((item, index) => (
+          <div
+            key={index}
+            className="rounded-lg bg-[#1a1a1a] flex flex-col justify-center items-center p-4 max-w-md max-h-96 lg:max-h-none lg:max-w-none"
+          >
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl transition-all duration-300">
+              <div className="absolute left-0 top-0 size-full">
+                <img
+                  src={item.img}
+                  alt={item.name}
+                  height={206}
+                  width={206}
+                  className="size-full rounded-sm  bg-center bg-no-repeat bg-cover "
+                />
+              </div>
+            </div>
+            <h3 className="text-base font-semibold mt-10">{item.name}</h3>
+            <h3 className="font-bold text-lg">
+              {item.value.toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              })}
+            </h3>
 
-          <button className="w-40 h-12 rounded-lg bg-black mt-2 ease-in-out hover:bg-black/90 text-center items-center p-2 font-medium">
-            Presentear
-          </button>
-        </div>
-      ))}
+            <button className="w-40 h-12 rounded-lg bg-black mt-2 ease-in-out hover:bg-black/90 text-center items-center p-2 font-medium">
+              Presentear
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
