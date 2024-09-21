@@ -42,7 +42,7 @@ export function ListItens() {
           {itens.map((item, index) => (
             <div
               key={index}
-              className="rounded-lg bg-[#1a1a1a] flex flex-col justify-center items-center p-4 max-w-md max-h-96 lg:max-h-none lg:max-w-none"
+              className="rounded-lg bg-[#1a1a1a] flex flex-col justify-center items-center p-4 max-w-md max-h-96 lg:max-h-none lg:max-w-none mx-3"
             >
               <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl transition-all duration-300">
                 <div className="absolute left-0 top-0 size-full">
