@@ -2,15 +2,15 @@ import MenuIcon from './MenuIcon'
 
 export function Header() {
   return (
-    <header className="sticky min-w-full flex justify-end lg:justify-center font-medium gap-8 p-2 mt-10 font-sans z-50">
+    <header className="min-w-full flex justify-end lg:justify-center font-medium gap-8 p-2 mt-10 z-50  max-w-[1360px]">
       <div className="hidden lg:flex gap-20">
-        <nav className="bg-zinc-700/50 w-72  h-12  rounded-lg content-center ease-in hover:border hover:border-amber-400 font-semibold text-2xl cursor-pointer">
+        <nav className="bg-zinc-700/50 w-72  h-12  rounded-lg content-center ease-in  hover:opacity-80 font-semibold text-2xl cursor-pointer">
           Cerimônia
         </nav>
-        <nav className="bg-zinc-700/50 w-72  h-12 rounded-lg content-center ease-in hover:border hover:border-amber-400 font-semibold text-2xl cursor-pointer">
+        <nav className="bg-zinc-700/50 w-72  h-12 rounded-lg content-center ease-in  hover:opacity-80 font-semibold text-2xl cursor-pointer">
           Lista de presentes
         </nav>
-        <nav className="bg-zinc-700/50 w-72  h-12 rounded-lg content-center ease-in hover:border hover:border-amber-400 font-semibold text-2xl cursor-pointer">
+        <nav className="bg-zinc-700/50 w-72  h-12 rounded-lg content-center ease-in  hover:opacity-80 font-semibold text-2xl cursor-pointer">
           Confirme sua presença
         </nav>
       </div>
