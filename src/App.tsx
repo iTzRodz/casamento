@@ -7,7 +7,7 @@ import { GiftProvider } from './context/ItensContext'
 
 function App() {
   return (
-    <main className="w-full h-full max-w-[1360px] flex flex-col gap-20 !antialiased">
+    <main className="w-full h-full max-w-[1400px] flex flex-col gap-20 !antialiased">
       <Header />
       <Home />
       <GiftProvider>
