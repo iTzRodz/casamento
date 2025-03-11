@@ -30,9 +30,9 @@
     "img": "/images/chocolate-tpm.png"
   },
   {
-    "name": "Skin de LOL para o noivo",
+    "name": "Carta pokémon",
     "value": 30.00,
-    "img": "/images/"
+    "img": "/images/box-pokemon.png"
   },
   {
     "name": "Brinquedos para o futuro filho de 4 patas",
@@ -143,10 +143,5 @@
     "name": "Ajuda na compra da casinha",
     "value": 500.00,
     "img": "/images/casinha.jpg"
-  },
-  {
-    "name": "Presente misterioso",
-    "value": "?",
-    "img": "/images/presente-misterioso.png"
   }
 ]

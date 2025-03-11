@@ -3,7 +3,7 @@ interface ArrowProps {
   disabled?: boolean
 }
 export function ArrowLeftIcon({ className, disabled = false }: ArrowProps) {
-  const stroke = disabled ? '#a1a1aa' : '#000000'
+  const stroke = disabled ? '#a1a1aa' : '#fff'
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

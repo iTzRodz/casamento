@@ -12,6 +12,12 @@ export default {
       backgroundColor: {
         'zinc-root': '#242424',
       },
+      colors: {
+        'gold': {
+          300: '#F4C542',
+          700: '#B8860B'
+        }
+      }
     },
   },
   plugins: [],
