@@ -38,7 +38,7 @@ export function ListItens() {
 
   return (
     <>
-      <div className="flex flex-col gap-20 px-5">
+      <section className="flex flex-col gap-20 px-5">
         <div className="grid grid-cols-1 gap-10 mobile:grid-cols-2 ipad:grid-cols-3 laptop:grid-cols-4 ">
           {itens.map((item, index) => (
             <div className="background-cards rounded-2xl p-px" key={index}>
@@ -76,7 +76,7 @@ export function ListItens() {
             </div>
           ))}
         </div>
-      </div>
+      </section>
       <div ref={parent}>
         {modal && <Cart handleCloseModal={handleCloseModal} />}
       </div>

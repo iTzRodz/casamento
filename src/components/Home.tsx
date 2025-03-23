@@ -5,7 +5,7 @@ import {
   differenceInSeconds,
   addDays,
   addHours,
-  addMinutes,
+  addMinutes
 } from 'date-fns'
 import { useEffect, useState } from 'react'
 export function Home() {
@@ -13,7 +13,7 @@ export function Home() {
     days: 0,
     hours: 0,
     minutes: 0,
-    seconds: 0,
+    seconds: 0
   })
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export function Home() {
       const seconds =
         differenceInSeconds(
           dateWedding,
-          addMinutes(addHours(addDays(now, days), hours), minutes),
+          addMinutes(addHours(addDays(now, days), hours), minutes)
         ) % 60
 
       setTimeLeft({ days, hours, minutes, seconds })
@@ -43,29 +43,29 @@ export function Home() {
     return () => clearInterval(timer)
   }, [])
   return (
-    <div className="w-max-[1360px] flex flex-col justify-center px-2">
+    <section className="w-max-[1360px] flex flex-col justify-center px-2 w-full mx-auto">
       <h1 className="font-bold  mobile:text-5xl text-4xl text-center">
         Contagem Regresiva
       </h1>
 
-      <div className="flex  mobile:justify-center items-center lg:gap-10 mt-8 gap-8 ">
-        <div className="size-20 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
+      <div className="grid grid-cols-2 mobile:grid-cols-4 lg:gap-10 gap-8 mx-auto mt-8">
+        <div className="size-24 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
           <p className="text-3xl">{timeLeft.days}</p>
           <span className="uppercase text-sm">Dias</span>
         </div>
-        <div className="size-20 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
+        <div className="size-24 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
           <p className="text-3xl">{timeLeft.hours}</p>
           <span className="uppercase text-sm">Horas</span>
         </div>
-        <div className="size-20 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
+        <div className="size-24 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
           <p className="text-3xl">{timeLeft.minutes}</p>
           <span className="uppercase text-sm">Minutos</span>
         </div>
-        <div className="size-20 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
+        <div className="size-24 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
           <p className="text-3xl">{timeLeft.seconds}</p>
           <span className="uppercase text-sm">Segundos</span>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
