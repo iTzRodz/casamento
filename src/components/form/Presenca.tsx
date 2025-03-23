@@ -67,7 +67,7 @@ export function ConfirmPresenca() {
     })
   }
   return (
-    <section className="h-screen mx-0 my-auto mt-20 rounded-lg">
+    <section className=" mx-0 my-auto rounded-lg px-5">
       {sucess ? (
         <div className="flex w-full flex-col justify-start gap-8 px-8 py-4 border border-[#1a1a1a] rounded-lg">
           <h3>dsadsalhdsçal</h3>
@@ -78,7 +78,7 @@ export function ConfirmPresenca() {
           className="flex justify-center rounded-xl mx-auto my-0 lg:w-[1024px] mt-10"
         >
           <div className="flex w-full flex-col justify-start gap-8 px-8 py-4 border border-[#1a1a1a] rounded-lg">
-            <h1 className="font-bold">Confirme sua presença</h1>
+            <h3 className="font-bold mobile:text-5xl text-3xl">Confirme sua presença</h3>
 
             <div className="flex lg:flex-row flex-col w-full mt-5 gap-5">
               <div className="flex flex-col gap-2 justify-start items-start  w-full">
@@ -141,7 +141,7 @@ export function ConfirmPresenca() {
                   <div className="flex flex-col gap-1">
                     <label
                       htmlFor="adultCount"
-                      className="text-start font-semibold text-lg/3"
+                      className="text-start font-semibold text-lg leading-5"
                     >
                       Quantidade de adultos sem incluir você
                     </label>
@@ -213,7 +213,7 @@ export function ConfirmPresenca() {
                 <div className="flex justify-start gap-4 items-baseline">
                   <label
                     htmlFor="childCount"
-                    className="text-start font-semibold text-lg/3"
+                    className="text-start font-semibold text-lg leading-5"
                   >
                     Quantidade de crianças
                   </label>
@@ -239,7 +239,7 @@ export function ConfirmPresenca() {
             )}
 
             <div className="w-full flex justify-center items-center mt-5">
-              <Button className="w-1/2" variant="primary" type="submit">
+              <Button className="w-full hover:opacity-80 max-w-96" variant="primary" type="submit">
                 Enviar
               </Button>
             </div>
