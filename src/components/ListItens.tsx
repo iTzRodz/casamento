@@ -38,19 +38,29 @@ export function ListItens() {
 
   return (
     <>
-      <section className="flex flex-col gap-20 px-5">
-        <div className="grid grid-cols-1 gap-10 mobile:grid-cols-2 ipad:grid-cols-3 laptop:grid-cols-4 ">
+      <section className="flex flex-col gap-20 px-5 mx-auto w-full bg-zinc-900/50 py-2.5 justify-center items-center rounded-lg">
+        <div className="space-y-4 mt-5 max-w-6xl w-full">
+          <h3 className="font-bold text-4xl mobile:text-5xl">
+            Lista de presentes!
+          </h3>
+          <p className="font-medium text-lg text-left mobile:text-xl">
+            Sua presença já é o melhor presente, mas se quiser nos mimar um
+            pouco mais, criamos uma lista de presentes divertidos e simbólicos.
+            Agradecemos de coração por cada gesto de carinho!
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-10 mobile:grid-cols-2 ipad:grid-cols-3 laptop:grid-cols-4 max-w-[1300px] w-full mx-auto">
           {itens.map((item, index) => (
             <div className="background-cards rounded-2xl p-px" key={index}>
               <div className="rounded-2xl bg-[#010202] flex flex-col size-full justify-between">
                 <div className="relative aspect-[3/4] w-full transition-all duration-300">
-                  <figure className="absolute left-0 top-0 size-full overflow-hidden rounded-xl">
+                  <figure className="absolute left-0 top-0 size-full overflow-hidden rounded-t-xl">
                     <img
                       src={item.img}
                       alt={item.name}
                       height={206}
                       width={206}
-                      className="size-full rounded-sm  bg-center bg-no-repeat bg-cover "
+                      className="size-full bg-center bg-no-repeat bg-cover "
                     />
                   </figure>
                 </div>

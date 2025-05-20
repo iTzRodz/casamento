@@ -32,6 +32,16 @@ export function MethodPayment() {
         </div>
       </div>
       {method === 'ted' ? <Ted /> : <Pix />}
+      <div className="w-full flex flex-col gap-4 justify-center items-center">
+        <h3 className='text-white text-xl font-semibold'>
+          Atenção: O site não possui integração com plataformas de pagamento.
+        </h3>
+        <p className='text-white text-base font-medium'>
+          Após concluir a compra, nenhuma confirmação automática será exibida e
+          você permanecerá na mesma tela.<br/> Fique tranquilo(a), sua participação
+          será registrada normalmente.
+        </p>
+      </div>
     </div>
   )
 }

@@ -43,29 +43,53 @@ export function Home() {
     return () => clearInterval(timer)
   }, [])
   return (
-    <section className="w-max-[1360px] flex flex-col justify-center px-2 w-full mx-auto">
-      <h1 className="font-bold  mobile:text-5xl text-4xl text-center">
-        Contagem Regresiva
-      </h1>
+    <>
+      <section className="max-w-[1360px] flex flex-col justify-center px-2 w-full mx-auto">
+        <h1 className="font-bold  mobile:text-5xl text-4xl text-center">
+          Contagem Regresiva
+        </h1>
 
-      <div className="grid grid-cols-2 mobile:grid-cols-4 lg:gap-10 gap-8 mx-auto mt-8">
-        <div className="size-24 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
-          <p className="text-3xl">{timeLeft.days}</p>
-          <span className="uppercase text-sm">Dias</span>
+        <div className="grid grid-cols-2 mobile:grid-cols-4 lg:gap-10 gap-8 mx-auto mt-8">
+          <div className="size-24 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
+            <p className="text-3xl">{timeLeft.days}</p>
+            <span className="uppercase text-sm">Dias</span>
+          </div>
+          <div className="size-24 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
+            <p className="text-3xl">{timeLeft.hours}</p>
+            <span className="uppercase text-sm">Horas</span>
+          </div>
+          <div className="size-24 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
+            <p className="text-3xl">{timeLeft.minutes}</p>
+            <span className="uppercase text-sm">Minutos</span>
+          </div>
+          <div className="size-24 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
+            <p className="text-3xl">{timeLeft.seconds}</p>
+            <span className="uppercase text-sm">Segundos</span>
+          </div>
         </div>
-        <div className="size-24 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
-          <p className="text-3xl">{timeLeft.hours}</p>
-          <span className="uppercase text-sm">Horas</span>
+      </section>
+
+      <section className="bg-zinc-900/50 w-full flex justify-center  mx-auto rounded-lg">
+        <div className="flex flex-col w-full text-white justify-center text-left max-w-6xl p-4">
+          <p className="font-medium text-lg mt-4">
+            Sim, vai ter casamento! E acontece que, na vida, a gente tem que ser
+            feliz por ser amado por alguém... e a nossa felicidade é dividir
+            esse momento incrível com você.{' '}
+          </p>
+          <p className="font-medium text-lg">
+            Criamos esse cantinho para dividir com vocês todos os detalhes do
+            grande dia: onde, quando, como chegar, o que vestir, como confirmar
+            presença, lista de presentes e muito mais. Tudo fácil, prático e sem
+            complicação!
+          </p>
+          <p className="font-medium text-lg">
+            Estamos contando os dias para viver esse momento incrível ao lado de
+            pessoas tão especiais. Prepare o look, o sorriso e a animação —
+            porque a festa vai ser inesquecível!
+          </p>
+          <p className="font-medium text-lg">Com carinho, Gabriela e Rodolfo</p>
         </div>
-        <div className="size-24 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
-          <p className="text-3xl">{timeLeft.minutes}</p>
-          <span className="uppercase text-sm">Minutos</span>
-        </div>
-        <div className="size-24 lg:size-24 bg-stone-700/50 text-lg flex flex-col justify-center items-center rounded-lg font-bold p-5">
-          <p className="text-3xl">{timeLeft.seconds}</p>
-          <span className="uppercase text-sm">Segundos</span>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }

@@ -1,9 +1,11 @@
+import 'react-toastify/dist/ReactToastify.css'
 import { useEffect, useState } from 'react'
 import { Button } from '../Button'
 import { useForm } from 'react-hook-form'
 import * as zod from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { saveFormData } from '../../store'
+import { toast } from 'react-toastify'
 
 interface Input {
   quantity: number
@@ -25,7 +27,8 @@ export type FormData = zod.infer<typeof validationFormSchema>
 export function ConfirmPresenca() {
   const [inputs, setInputs] = useState<Input[]>([])
   const [sucess, setSucess] = useState(false)
-  const { register, handleSubmit, watch } = useForm<FormData>({
+  const [loading, setLoading] = useState(false)
+  const { register, handleSubmit, watch, setValue } = useForm<FormData>({
     resolver: zodResolver(validationFormSchema),
     defaultValues: {
       email: '',
@@ -53,24 +56,41 @@ export function ConfirmPresenca() {
   const adultCount = watch('adultHouseHold.count')
   const isGoToEvent = watch('isGoToEvent')
   useEffect(() => {
+    const currentNames = watch('adultHouseHold.names') || []
     addAdults(adultCount)
-  }, [adultCount])
+
+    if (currentNames.length !== adultCount) {
+      const newNames = Array.from(
+        { length: adultCount },
+        (_, i) => currentNames[i] || ''
+      )
+      setValue('adultHouseHold.names', newNames)
+    }
+  }, [adultCount, setValue, watch])
 
   async function handleSubimitForm(data: FormData) {
+    setLoading(true)
     await saveFormData(data).then(res => {
-      if (res?.status !== 500) {
-        
+      if (res.status !== 201) {
+        const { data } = res
+        toast.error(data, {
+          position: 'top-center'
+        })
+        setLoading(false)
+        return
       }
-      console.log(res)
 
-      // setSucess(true)
+      setSucess(true)
     })
   }
   return (
-    <section className=" mx-0 my-auto rounded-lg px-5">
+    <section className=" mx-auto rounded-lg px-5">
       {sucess ? (
-        <div className="flex w-full flex-col justify-start gap-8 px-8 py-4 border border-[#1a1a1a] rounded-lg">
-          <h3>dsadsalhdsçal</h3>
+        <div className="flex w-full flex-col justify-start gap-4 px-8 py-4 border border-[#1a1a1a] rounded-lg lg:w-[1024px]">
+          <h3 className='font-bold text-2xl'>Muito obrigado por responder ao nosso formulário de casamento!</h3>
+          <p className='font-medium text-base'>Agradecemos de coração por ter dedicado um tempinho para nos informar — sua resposta é muito importante para que possamos nos organizar com carinho e cuidado.</p>
+          <p className='font-medium text-base'>Com gratidão,</p>
+          <p className='font-bold text-base'>Gabriela & Rodolfo</p>
         </div>
       ) : (
         <form
@@ -78,7 +98,9 @@ export function ConfirmPresenca() {
           className="flex justify-center rounded-xl mx-auto my-0 lg:w-[1024px] mt-10"
         >
           <div className="flex w-full flex-col justify-start gap-8 px-8 py-4 border border-[#1a1a1a] rounded-lg">
-            <h3 className="font-bold mobile:text-5xl text-3xl">Confirme sua presença</h3>
+            <h3 className="font-bold mobile:text-5xl text-3xl">
+              Confirme sua presença
+            </h3>
 
             <div className="flex lg:flex-row flex-col w-full mt-5 gap-5">
               <div className="flex flex-col gap-2 justify-start items-start  w-full">
@@ -135,7 +157,7 @@ export function ConfirmPresenca() {
               </div>
             </div>
 
-            {isGoToEvent === '1' ? (
+            {isGoToEvent === '1' && (
               <>
                 <div className="flex justify-start items-stretch gap-4">
                   <div className="flex flex-col gap-1">
@@ -178,18 +200,6 @@ export function ConfirmPresenca() {
                     <option label="6" value={6}>
                       6
                     </option>
-                    <option label="7" value={7}>
-                      7
-                    </option>
-                    <option label="8" value={8}>
-                      8
-                    </option>
-                    <option label="9" value={9}>
-                      9
-                    </option>
-                    <option label="10" value={10}>
-                      10
-                    </option>
                   </select>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-x-5  justify-start items-start w-full">
@@ -228,19 +238,20 @@ export function ConfirmPresenca() {
                     <option value={3}>3</option>
                     <option value={4}>4</option>
                     <option value={5}>5</option>
+                    <option value={6}>6</option>
                   </select>
                 </div>
               </>
-            ) : (
-              <div>
-                sexodsadsa
-                <p>dsadsa</p>
-              </div>
             )}
 
             <div className="w-full flex justify-center items-center mt-5">
-              <Button className="w-full hover:opacity-80 max-w-96" variant="primary" type="submit">
-                Enviar
+              <Button
+                className="w-full hover:opacity-80 max-w-96"
+                variant="primary"
+                type="submit"
+                loading={loading}
+              >
+                {loading ? 'Carregando...' : 'Enviar'}
               </Button>
             </div>
           </div>

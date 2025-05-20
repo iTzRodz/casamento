@@ -49,7 +49,7 @@ export function OrderSummary({
         >
           Editar carrinho
         </Button>
-        <Button
+        {/* <Button
           variant="primary"
           className={`w-full bg-white text-black`}
           arrowIcon={true}
@@ -57,7 +57,7 @@ export function OrderSummary({
           onClick={() => setShowMethodPayment(true)}
         >
           Concluir compra
-        </Button>
+        </Button> */}
       </div>
 
       {showMethodPayment && (
