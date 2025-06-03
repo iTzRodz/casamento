@@ -6,117 +6,117 @@
   },
   {
     "name": "Vaquinha para quitar a Arena Corinthians",
-    "value": 10.00,
+    "value": 10.0,
     "img": "/images/vaquinha-arena-corinthians.jpg"
   },
   {
     "name": "Engov para os noivos",
-    "value": 15.00,
+    "value": 15.0,
     "img": "/images/engov.jpg"
   },
   {
     "name": "Chocolate para TPM da noiva",
-    "value": 25.00,
+    "value": 25.0,
     "img": "/images/chocolate-tpm.png"
   },
   {
     "name": "Carta pokémon",
-    "value": 30.00,
+    "value": 30.0,
     "img": "/images/box-pokemon.png"
   },
   {
     "name": "Brinquedos para o futuro filho de 4 patas",
-    "value": 40.00,
+    "value": 40.0,
     "img": "/images/dog.png"
   },
   {
     "name": "Fardinho de corona",
-    "value": 45.00,
+    "value": 45.0,
     "img": "/images/fardinho-de-corona.png"
   },
   {
     "name": "Mundial do Palmeiras",
-    "value": 51.00,
+    "value": 51.0,
     "img": "/images/mundial-porcada.png"
   },
   {
     "name": "Calmante para a noiva",
-    "value": 60.00,
+    "value": 60.0,
     "img": "/images/calmante.png"
   },
   {
     "name": "Suborno para ganhar o buquê",
-    "value": 70.00,
+    "value": 70.0,
     "img": "/images/suborno-buquê.jpg"
   },
   {
     "name": "Show do Zeca Pagodinho",
-    "value": 80.00,
+    "value": 80.0,
     "img": "/images/zeca-pagodinho.jpg"
   },
   {
     "name": "Mensalidade da academia para o noivo",
-    "value": 90.00,
+    "value": 90.0,
     "img": "/images/mensalidade-da-academia.png"
   },
   {
     "name": "Whey do noivo",
-    "value": 100.00,
+    "value": 100.0,
     "img": "/images/whey.jpg"
   },
   {
     "name": "Mensalidade do Chat GPT para o noivo trabalhar",
-    "value": 150.00,
+    "value": 150.0,
     "img": "/images/chatgpt.jfif"
   },
   {
     "name": "Cruzeiro do Neymar",
-    "value": 180.00,
+    "value": 180.0,
     "img": "/images/cruzeiro-ney.png"
   },
   {
     "name": "Camisa nova do Corinthians",
-    "value": 199.90,
+    "value": 199.9,
     "img": "/images/camisa-corinthians.jpg"
   },
   {
     "name": "TV de tubo para a sala",
-    "value": 250.00,
+    "value": 250.0,
     "img": "/images/tv-tubo.png"
   },
   {
     "name": "Viagem ao Itaquerão",
-    "value": 300.00,
+    "value": 300.0,
     "img": "/images/viagem-itaquera.png"
   },
   {
     "name": "Lingerie chic",
-    "value": 320.00,
+    "value": 320.0,
     "img": "/images/lingerie.jpg"
   },
   {
     "name": "Cueca nova",
-    "value": 350.00,
+    "value": 350.0,
     "img": "/images/cueca-nova.jpg"
   },
   {
     "name": "Um ano de correção de provas para a noiva",
-    "value": 400.00,
+    "value": 400.0,
     "img": "/images/correcao-provas.jpg"
   },
   {
     "name": "Vaquinha para comprar a Kombi",
-    "value": 450.00,
+    "value": 450.0,
     "img": "/images/vaquinha-kombi.png"
   },
   {
     "name": "Ajuda com os alugueis atrasados",
-    "value": 500.00,
+    "value": 500.0,
     "img": "/images/aluguel-atrasado.jpg"
   },
   {
     "name": "Ajuda na compra da casinha",
-    "value": 600.00,
+    "value": 600.0,
     "img": "/images/casinha.jpg"
   }
 ]
