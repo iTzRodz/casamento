@@ -1,4 +1,6 @@
-import { CopyIcon } from '../icons/CopyIcon'
+import { useState } from "react";
+import { CopyIcon } from "../icons/CopyIcon";
+import { toast } from "react-toastify";
 
 export function Pix() {
   return (
@@ -17,10 +19,26 @@ export function Pix() {
           CARVALHO6007MARILIA62290525OfpJiQNI82FrSdD8OAOip07sX6304B455
         </p>
 
-        <span className="hover:opacity-80 cursor-pointer">
-          <CopyIcon />
-        </span>
+        <button
+          type="button"
+          aria-label="Copiar código PIX"
+          title="Copiar código PIX"
+          className="hover:opacity-80 cursor-pointer flex flex-col"
+          onClick={() => {
+            navigator.clipboard.writeText(
+              "00020126990014br.gov.bcb.pix01369faf24f2-39e6-4a55-8d1c-482a2ebb071b0237Presentes de casamento Rodofo e Gabri5204000053039865802BR5916RODOLFO CARVALHO6007MARILIA62290525OfpJiQNI82FrSdD8OAOip07sX6304B455"
+            );
+            toast.success("Código PIX copiado!", {
+              position: "top-center",
+              autoClose: 3000,
+            });
+          }}
+        >
+          <span>
+            <CopyIcon />
+          </span>
+        </button>
       </div>
     </div>
-  )
+  );
 }
