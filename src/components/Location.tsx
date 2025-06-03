@@ -22,7 +22,7 @@ export function Location() {
             📅 Data: <strong> 30/08/2025</strong>
           </p>
           <p className="text-lg font-semibold">
-            ⏰ Horário: <strong> 16:30</strong>
+            ⏰ Horário: <strong> 16:15</strong>
           </p>
         </div>
       </div>
