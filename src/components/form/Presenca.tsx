@@ -26,7 +26,7 @@ const validationFormSchema = zod.object({
 export type FormData = zod.infer<typeof validationFormSchema>
 export function ConfirmPresenca() {
   const [inputs, setInputs] = useState<Input[]>([])
-  const [sucess, setSucess] = useState(false)
+  const [success, setSuccess] = useState(true)
   const [loading, setLoading] = useState(false)
   const { register, handleSubmit, watch, setValue } = useForm<FormData>({
     resolver: zodResolver(validationFormSchema),
@@ -80,17 +80,17 @@ export function ConfirmPresenca() {
         return
       }
 
-      setSucess(true)
+      setSuccess(true)
     })
   }
   return (
     <section className=" mx-auto rounded-lg px-5">
-      {sucess ? (
-        <div className="flex w-full flex-col justify-start gap-4 px-8 py-4 border border-[#1a1a1a] rounded-lg lg:w-[1024px]">
+      {success ? (
+        <div className="flex w-full flex-col justify-start gap-2 px-8 py-4 border border-[#1a1a1a] rounded-lg lg:w-[1024px]">
           <h3 className='font-bold text-2xl'>Muito obrigado por responder ao nosso formulário de casamento!</h3>
           <p className='font-medium text-base'>Agradecemos de coração por ter dedicado um tempinho para nos informar — sua resposta é muito importante para que possamos nos organizar com carinho e cuidado.</p>
           <p className='font-medium text-base'>Com gratidão,</p>
-          <p className='font-bold text-base'>Gabriela & Rodolfo</p>
+          <p className='font-bold text-xl mt-3'>Gabriela & Rodolfo</p>
         </div>
       ) : (
         <form
@@ -204,7 +204,7 @@ export function ConfirmPresenca() {
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-x-5  justify-start items-start w-full">
                   {inputs.length > 0 &&
-                    inputs.map((input, index) => (
+                    inputs.map((_input, index) => (
                       <div key={index} className="flex flex-col gap-2 w-full">
                         <span className="text-start font-semibold text-lg/3">
                           Nome Completo:{' '}
