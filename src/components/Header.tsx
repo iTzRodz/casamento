@@ -1,16 +1,16 @@
-import MenuIcon from './MenuIcon'
+import MenuIcon from "./MenuIcon";
 
 export function Header() {
   return (
-    <header className="min-w-full flex justify-end lg:justify-center font-medium gap-8 p-2 mt-10 z-50  max-w-[1360px] px-5">
-      <div className="hidden lg:flex gap-20">
-        <nav className="bg-zinc-700/50 w-72  h-12  rounded-lg content-center ease-in  hover:opacity-80 font-semibold text-2xl cursor-pointer">
+    <header className="z-50 mt-10 flex min-w-full max-w-[1360px] justify-end gap-8 p-2 px-5  font-medium lg:justify-center">
+      <div className="hidden gap-20 lg:flex">
+        <nav className="h-12 w-72  cursor-pointer  content-center rounded-lg bg-zinc-700/60  text-2xl font-semibold ease-in hover:opacity-80">
           Cerimônia
         </nav>
-        <nav className="bg-zinc-700/50 w-72  h-12 rounded-lg content-center ease-in  hover:opacity-80 font-semibold text-2xl cursor-pointer">
+        <nav className="h-12 w-72  cursor-pointer content-center rounded-lg bg-zinc-700/60  text-2xl font-semibold ease-in hover:opacity-80">
           Lista de presentes
         </nav>
-        <nav className="bg-zinc-700/50 w-72  h-12 rounded-lg content-center ease-in  hover:opacity-80 font-semibold text-2xl cursor-pointer">
+        <nav className="h-12 w-72  cursor-pointer content-center rounded-lg bg-zinc-700/60  text-2xl font-semibold ease-in hover:opacity-80">
           Confirme sua presença
         </nav>
       </div>
@@ -20,19 +20,19 @@ export function Header() {
           <MenuIcon />
         </div>
         <div className="absolute right-0 hidden pt-5 group-hover:block">
-          <div className="flex flex-col gap-2 bg-zinc-700 rounded-lg w-56 text-center p-2">
-            <nav className="hover:bg-zinc-600  mobile:h-12 h-8 rounded-lg content-center ease-in font-semibold text-lg mobile:text-xl cursor-pointer text-center">
+          <div className="flex w-56 flex-col gap-2 rounded-lg bg-zinc-700 p-2 text-center">
+            <nav className="h-8  cursor-pointer content-center rounded-lg text-center text-lg font-semibold ease-in hover:bg-zinc-600 mobile:h-12 mobile:text-xl">
               Cerimônia
             </nav>
-            <nav className="hover:bg-zinc-600  mobile:h-12 h-8 rounded-lg content-center ease-in font-semibold text-lg mobile:text-xl cursor-pointer">
+            <nav className="h-8  cursor-pointer content-center rounded-lg text-lg font-semibold ease-in hover:bg-zinc-600 mobile:h-12 mobile:text-xl">
               Lista de presentes
             </nav>
-            <nav className="hover:bg-zinc-600 w-full mobile:h-12 h-8 rounded-lg content-center ease-in  font-semibold text-lg mobile:text-xl cursor-pointer leading-5">
+            <nav className="h-8 w-full cursor-pointer content-center rounded-lg text-lg font-semibold  leading-5 ease-in hover:bg-zinc-600 mobile:h-12 mobile:text-xl">
               Confirme sua presença
             </nav>
           </div>
         </div>
       </div>
     </header>
-  )
+  );
 }

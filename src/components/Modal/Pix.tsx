@@ -1,10 +1,9 @@
-import { useState } from "react";
 import { CopyIcon } from "../icons/CopyIcon";
 import { toast } from "react-toastify";
 
 export function Pix() {
   return (
-    <div className="flex flex-col justify-center items-center max-w-96 gap-4">
+    <div className="flex max-w-96 flex-col items-center justify-center gap-4">
       <img
         src="/images/pix-qrcode.jpg"
         alt="QRCODE PIX"
@@ -12,7 +11,7 @@ export function Pix() {
         width={250}
       />
 
-      <div className="border border-gold-700 rounded-xl flex w-full text-white py-4 px-5 gap-4">
+      <div className="flex w-full gap-4 rounded-xl border border-gold-700 px-5 py-4 text-white">
         <p className="truncate">
           00020126990014br.gov.bcb.pix01369faf24f2-39e6-4a55-8d1c-482a2ebb071b0237Presentes
           de casamento Rodofo e Gabri5204000053039865802BR5916RODOLFO
@@ -23,10 +22,10 @@ export function Pix() {
           type="button"
           aria-label="Copiar código PIX"
           title="Copiar código PIX"
-          className="hover:opacity-80 cursor-pointer flex flex-col"
+          className="flex cursor-pointer flex-col hover:opacity-80"
           onClick={() => {
             navigator.clipboard.writeText(
-              "00020126990014br.gov.bcb.pix01369faf24f2-39e6-4a55-8d1c-482a2ebb071b0237Presentes de casamento Rodofo e Gabri5204000053039865802BR5916RODOLFO CARVALHO6007MARILIA62290525OfpJiQNI82FrSdD8OAOip07sX6304B455"
+              "00020126990014br.gov.bcb.pix01369faf24f2-39e6-4a55-8d1c-482a2ebb071b0237Presentes de casamento Rodofo e Gabri5204000053039865802BR5916RODOLFO CARVALHO6007MARILIA62290525OfpJiQNI82FrSdD8OAOip07sX6304B455",
             );
             toast.success("Código PIX copiado!", {
               position: "top-center",

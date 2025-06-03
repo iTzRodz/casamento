@@ -1,14 +1,14 @@
-import type { FastifyPluginAsyncZod } from 'fastify-type-provider-zod'
-import { string, z } from 'zod'
-import {  respondToWeddingInvite} from '../controller/form-controler'
+import type { FastifyPluginAsyncZod } from "fastify-type-provider-zod";
+import { string, z } from "zod";
+import { respondToWeddingInvite } from "../controller/form-controler";
 
-export const subscribeToEventRoute: FastifyPluginAsyncZod = async app => {
+export const subscribeToEventRoute: FastifyPluginAsyncZod = async (app) => {
   app.post(
-    '/form',
+    "/form",
     {
       schema: {
         body: z.object({
-          isGoToEvent: z.enum(['1', '0']),
+          isGoToEvent: z.enum(["1", "0"]),
           email: z.string().min(1).email(),
           name: z.string().min(1),
           adultCount: z.number(),
@@ -35,13 +35,13 @@ export const subscribeToEventRoute: FastifyPluginAsyncZod = async app => {
       try {
         const { message, status } = await respondToWeddingInvite(request.body);
         if (status === 201) {
-          return reply.status(201).send( { message });
+          return reply.status(201).send({ message });
         } else {
-          return reply.status(400).send({  message });
+          return reply.status(400).send({ message });
         }
       } catch (error) {
-        return reply.status(500).send({ message: 'Internal Server Error' });
+        return reply.status(500).send({ message: "Internal Server Error" });
       }
-    }
+    },
   );
-}
+};
