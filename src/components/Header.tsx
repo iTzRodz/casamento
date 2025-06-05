@@ -25,10 +25,10 @@ export function Header() {
               Cerimônia
             </nav>
             <nav className="h-8  cursor-pointer content-center rounded-lg text-lg font-semibold ease-in hover:bg-zinc-600 mobile:h-12 mobile:text-xl">
-              Lista de presentes
+              Presentes
             </nav>
             <nav className="h-8 w-full cursor-pointer content-center rounded-lg text-lg font-semibold  leading-5 ease-in hover:bg-zinc-600 mobile:h-12 mobile:text-xl">
-              Confirme sua presença
+              Presença
             </nav>
           </div>
         </div>

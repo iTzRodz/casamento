@@ -1,5 +1,5 @@
 interface ArrowProps {
-  className?: string
+  className?: string;
 }
 export const ArrowRightIcon = ({ className }: ArrowProps) => (
   <svg
@@ -17,4 +17,4 @@ export const ArrowRightIcon = ({ className }: ArrowProps) => (
     <path d="M5 12h14" />
     <path d="m12 5 7 7-7 7" />
   </svg>
-)
+);

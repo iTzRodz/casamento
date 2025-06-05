@@ -5,7 +5,7 @@ export function Location() {
     <section className="mx-auto flex w-full max-w-[1400px] flex-col items-center gap-5 rounded-lg px-5 py-4 mobile:justify-center">
       <div className="max-w-6xl space-y-4">
         <h3 className="text-4xl font-bold mobile:text-5xl">Cerimônia 💍</h3>
-        <p className="text-start text-lg font-medium mobile:text-xl">
+        <p className="text-center text-lg font-medium mobile:text-xl">
           Estamos muito felizes em compartilhar esse momento com vocês! Nossa
           cerimônia será realizada em um espaço especial, cercado pela natureza
           e por aqueles que amamos. Esperamos vocês para celebrar esse dia

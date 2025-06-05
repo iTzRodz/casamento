@@ -45,23 +45,20 @@ export function ListItens() {
             <h3 className="text-4xl font-bold mobile:text-5xl">
               Lista de presentes!
             </h3>
-            <p className="text-left text-lg font-medium mobile:text-xl">
-              Sua presença já é o melhor presente, mas se quiser nos mimar um
-              pouco mais, criamos uma lista de presentes divertidos e
-              simbólicos. Agradecemos de coração por cada gesto de carinho!
+            <p className="text-center text-lg font-medium mobile:text-xl">
+              Sua presença já é o melhor presente! Mas, se quiser nos mimar um pouco mais, criamos duas listas especiais: uma com presentes divertidos e simbólicos, e outra com opções físicas. Fique à vontade para escolher como preferir. Agradecemos de coração por cada gesto de carinho!{" "}
+              <a
+              href="https://www.querodecasamento.com.br/lista-de-casamento/gabi--rodz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 underline hover:opacity-80"
+              >
+              Veja nossa lista de presentes físicos aqui.
+              </a>
             </p>
           </div>
 
-          <div className="mt-10 flex w-full items-center justify-end gap-4">
-            <Button variant="primary" className="font-bold hover:opacity-80">
-              PIX
-            </Button>
-            <Button variant="primary" className="font-bold hover:opacity-80">
-              Físicos
-            </Button>
-          </div>
-
-          <div className="mx-auto grid w-full max-w-[1300px] grid-cols-1 gap-10 mobile:grid-cols-2 ipad:grid-cols-3 laptop:grid-cols-4">
+          <div className="mx-auto mt-6 grid w-full max-w-[1300px] grid-cols-1 gap-10 mobile:grid-cols-2 ipad:grid-cols-3 laptop:grid-cols-4">
             {itens.slice(0, visiblePresents).map((item, index) => (
               <div className="background-cards rounded-2xl p-px" key={index}>
                 <div className="flex size-full flex-col justify-between rounded-2xl bg-[#010202]">

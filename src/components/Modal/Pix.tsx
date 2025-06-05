@@ -7,8 +7,8 @@ export function Pix() {
       <img
         src="/images/pix-qrcode.jpg"
         alt="QRCODE PIX"
-        height={250}
-        width={250}
+        height={200}
+        width={200}
       />
 
       <div className="flex w-full gap-4 rounded-xl border border-gold-700 px-5 py-4 text-white">

@@ -1,5 +1,5 @@
 interface LoadingProps {
-  className: string
+  className: string;
 }
 export const LoadingIcon = ({ className }: LoadingProps) => (
   <svg
@@ -16,4 +16,4 @@ export const LoadingIcon = ({ className }: LoadingProps) => (
   >
     <path d="M21 12a9 9 0 1 1-6.219-8.56" />
   </svg>
-)
+);

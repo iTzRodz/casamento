@@ -44,25 +44,25 @@ export function Home() {
   }, []);
   return (
     <>
-      <section className="mx-auto mt-20 flex w-full max-w-[1360px] flex-col justify-center px-2">
+      <section className="mx-auto mt-10 flex w-full max-w-[1360px] flex-col justify-center px-2">
         <h1 className="text-center  text-4xl font-bold text-white mobile:text-5xl">
           Contagem Regresiva
         </h1>
 
-        <div className="mx-auto mt-8 grid grid-cols-2 gap-8 mobile:grid-cols-4 lg:gap-10">
-          <div className="flex size-24 flex-col items-center justify-center rounded-lg bg-stone-700/60 p-5 text-lg font-bold lg:size-24">
+        <div className="mx-auto mt-8 grid grid-cols-3 gap-8 px-4 mobile:grid-cols-4 lg:gap-10">
+          <div className="flex size-20 flex-col items-center justify-center rounded-lg bg-stone-700/60 p-5 text-lg font-bold lg:size-24">
             <p className="text-3xl">{timeLeft.days}</p>
             <span className="text-sm uppercase">Dias</span>
           </div>
-          <div className="flex size-24 flex-col items-center justify-center rounded-lg bg-stone-700/60 p-5 text-lg font-bold lg:size-24">
+          <div className="flex size-20 flex-col items-center justify-center rounded-lg bg-stone-700/60 p-5 text-lg font-bold lg:size-24">
             <p className="text-3xl">{timeLeft.hours}</p>
             <span className="text-sm uppercase">Horas</span>
           </div>
-          <div className="flex size-24 flex-col items-center justify-center rounded-lg bg-stone-700/60 p-5 text-lg font-bold lg:size-24">
+          <div className="flex size-20 flex-col items-center justify-center rounded-lg bg-stone-700/60 p-5 text-lg font-bold lg:size-24">
             <p className="text-3xl">{timeLeft.minutes}</p>
             <span className="text-sm uppercase">Minutos</span>
           </div>
-          <div className="flex size-24 flex-col items-center justify-center rounded-lg bg-stone-700/60 p-5 text-lg font-bold lg:size-24">
+          <div className=" hidden size-20 flex-col items-center justify-center rounded-lg bg-stone-700/60 p-5 text-lg font-bold mobile:flex lg:size-24">
             <p className="text-3xl">{timeLeft.seconds}</p>
             <span className="text-sm uppercase">Segundos</span>
           </div>

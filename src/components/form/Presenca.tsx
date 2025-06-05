@@ -26,7 +26,7 @@ const validationFormSchema = zod.object({
 export type FormData = zod.infer<typeof validationFormSchema>;
 export function ConfirmPresenca() {
   const [inputs, setInputs] = useState<Input[]>([]);
-  const [success, setSuccess] = useState(true);
+  const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
   const { register, handleSubmit, watch, setValue } = useForm<FormData>({
     resolver: zodResolver(validationFormSchema),
