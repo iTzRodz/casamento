@@ -32,7 +32,7 @@ export function Button(props: IButtonProps) {
         {loading && <LoadingIcon className={"mr-2 animate-spin"} />}
         {children}
       </span>
-      <ArrowRightIcon className="absolute right-16 top-1/2 translate-y-[-50%] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-2 group-hover:text-black group-hover:opacity-100" />
+      <ArrowRightIcon className="absolute right-16 top-1/2 hidden translate-y-[-50%] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-2 group-hover:text-black group-hover:opacity-100 tablet:flex" />
     </button>
   );
 }

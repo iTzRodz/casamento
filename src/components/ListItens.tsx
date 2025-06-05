@@ -66,7 +66,7 @@ export function ListItens() {
             {itens.slice(0, visiblePresents).map((item, index) => (
               <div className="background-cards rounded-2xl p-px" key={index}>
                 <div className="flex size-full flex-col justify-between rounded-2xl bg-[#010202]">
-                  <div className="relative aspect-[3/4] w-full transition-all duration-300">
+                  <div className="relative aspect-[3/2] w-full transition-all duration-300 tablet:aspect-[3/4]">
                     <figure className="absolute left-0 top-0 size-full overflow-hidden rounded-t-xl">
                       <img
                         src={item.img}
