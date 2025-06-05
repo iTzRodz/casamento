@@ -11,6 +11,6 @@ const MenuIcon = () => (
       fill="currentColor"
     />
   </svg>
-)
+);
 
-export default MenuIcon
+export default MenuIcon;

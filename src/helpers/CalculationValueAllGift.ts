@@ -1,14 +1,14 @@
-import { useItems } from '../context/ItensContext'
+import { useItems } from "../context/ItensContext";
 
 export function CalculationValueAllGifts() {
-  const { giftsList } = useItems()
+  const { giftsList } = useItems();
 
   const total = giftsList.reduce((acc, gift) => {
-    return acc + gift.value * gift.quantity
-  }, 0)
+    return acc + gift.value * gift.quantity;
+  }, 0);
 
-  return total.toLocaleString('pt-BR', {
-    style: 'currency',
-    currency: 'BRL',
-  })
+  return total.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
 }

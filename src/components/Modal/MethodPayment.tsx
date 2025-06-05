@@ -1,37 +1,44 @@
-import { useState } from 'react'
-import { Pix } from './Pix'
-import { Ted } from './Ted'
-import classNames from 'classnames'
+import { Pix } from "./Pix";
+import { Ted } from "./Ted";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 
-type MethodPayment = 'pix' | 'ted'
 export function MethodPayment() {
-  const [method, setMethod] = useState<MethodPayment>('pix')
-  const selectedItem = 'border-white !bg-gold-300'
-  // const borderSelected = 'border-white'
   return (
-    <div className="flex flex-col items-center gap-10 w-full">
-      <div className="flex gap-3 justify-center items-center w-full">
-        <div
-          className={classNames(
-            'text-black font-bold shadow-md bg-gold-300/95 rounded-md max-w-64 w-full py-2 cursor-pointer flex flex-col select-none border-2 border-transparent',
-            method === 'pix' && selectedItem
-          )}
-          onClick={() => setMethod('pix')}
-        >
-          <span className="w-full">PIX</span>
-        </div>
+    <div className="flex w-full flex-col items-center gap-10">
+      <Tabs defaultValue="pix" className="">
+        <TabsList className="w-full max-w-52 rounded-lg border border-transparent bg-transparent">
+          <TabsTrigger
+            value="pix"
+            className="w-full bg-[#2E3138] font-semibold text-white data-[state=active]:border-white data-[state=active]:bg-white data-[state=active]:text-black"
+          >
+            PIX
+          </TabsTrigger>
+          <TabsTrigger
+            value="ted"
+            className="w-full bg-[#2E3138] font-semibold text-white data-[state=active]:border-white data-[state=active]:bg-white data-[state=active]:text-black"
+          >
+            Ted
+          </TabsTrigger>
+        </TabsList>
+        <TabsContent value="pix">
+          <Pix />
+        </TabsContent>
+        <TabsContent value="ted">
+          <Ted />
+        </TabsContent>
+      </Tabs>
 
-        <div
-          className={classNames(
-            'text-black font-bold shadow-md bg-gold-300/95 rounded-md max-w-64 w-full py-2 cursor-pointer select-none border-2 border-transparent',
-            method === 'ted' && selectedItem
-          )}
-          onClick={() => setMethod('ted')}
-        >
-          <span>TED</span>
-        </div>
+      <div className="flex w-full flex-col items-center justify-center gap-4">
+        <h3 className="text-xl font-semibold text-white">
+          Atenção: O site não possui integração com plataformas de pagamento.
+        </h3>
+        <p className="text-base font-medium text-white">
+          Após concluir a compra, nenhuma confirmação automática será exibida e
+          você permanecerá na mesma tela.
+          <br /> Fique tranquilo(a), sua participação será registrada
+          normalmente.
+        </p>
       </div>
-      {method === 'ted' ? <Ted /> : <Pix />}
     </div>
-  )
+  );
 }

@@ -1,33 +1,31 @@
-import { Maps } from './maps'
+import { Maps } from "./maps";
 
 export function Location() {
   return (
-    <section className="flex flex-col gap-5 px-5 max-w-[1400px] mobile:justify-center mx-auto items-center w-full rounded-lg py-4">
-      <div className="space-y-4 mobile:max-w-4xl">
-        <h3 className="text-4xl mobile:text-5xl font-bold">
-          Nossa Cerimônia 💍
-        </h3>
-        <p className="text-base mobile:text-xl font-medium">
+    <section className="mx-auto flex w-full max-w-[1400px] flex-col items-center gap-5 rounded-lg px-5 py-4 mobile:justify-center">
+      <div className="max-w-6xl space-y-4">
+        <h3 className="text-4xl font-bold mobile:text-5xl">Cerimônia 💍</h3>
+        <p className="text-center text-lg font-medium mobile:text-xl">
           Estamos muito felizes em compartilhar esse momento com vocês! Nossa
           cerimônia será realizada em um espaço especial, cercado pela natureza
           e por aqueles que amamos. Esperamos vocês para celebrar esse dia
           inesquecível juntos!
         </p>
 
-        <div className="space-y-1 font-medium text-base">
-          <p className="text-base font-semibold">
+        <div className="space-y-1 text-base font-medium">
+          <p className="text-lg font-semibold">
             📍 Local: <strong> Chácará San Rafael</strong>
           </p>
-          <p className="text-base font-semibold">
+          <p className="text-lg font-semibold">
             📅 Data: <strong> 30/08/2025</strong>
           </p>
-          <p className="text-base font-semibold">
-            ⏰ Horário: <strong> 16:30</strong>
+          <p className="text-lg font-semibold">
+            ⏰ Horário: <strong> 16:15</strong>
           </p>
         </div>
       </div>
 
       <Maps />
     </section>
-  )
+  );
 }

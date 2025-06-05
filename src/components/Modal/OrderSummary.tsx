@@ -1,34 +1,32 @@
-import { useState } from 'react'
-import { useItems } from '../../context/ItensContext'
-import { CalculationValueAllGifts } from '../../helpers/CalculationValueAllGift'
-import { Button } from '../Button'
-import { CloseIcon } from '../icons/CloseIcon'
-import { MethodPayment } from './MethodPayment'
+import { useItems } from "../../context/ItensContext";
+import { CalculationValueAllGifts } from "../../helpers/CalculationValueAllGift";
+import { Button } from "../Button";
+import { CloseIcon } from "../icons/CloseIcon";
+import { MethodPayment } from "./MethodPayment";
 
 interface ConfirmationPaymentProps {
-  handleCloseModalOrderSummary?: () => void
+  handleCloseModalOrderSummary?: () => void;
 }
 
 export function OrderSummary({
-  handleCloseModalOrderSummary
+  handleCloseModalOrderSummary,
 }: ConfirmationPaymentProps) {
-  const { giftsList } = useItems()
-  const [showMethodPayment, setShowMethodPayment] = useState<boolean>(true)
+  const { giftsList } = useItems();
 
   return (
-    <div className="flex w-full flex-col justify-start px-8 py-4 border border-transparent rounded-lg shadow">
+    <div className="flex w-full flex-col justify-start rounded-lg border border-transparent px-8 py-4 shadow">
       <span
-        className="flex justify-end cursor-pointer "
+        className="flex cursor-pointer justify-end "
         onClick={handleCloseModalOrderSummary}
       >
         <CloseIcon />
       </span>
 
-      <h3 className="font-semibold text-white text-4xl mobile:text-5xl mt-4">
+      <h3 className="mt-4 text-4xl font-semibold text-white mobile:text-5xl">
         Resumo da compra
       </h3>
 
-      <div className="mt-4 flex flex-col justify-start text-start space-y-1">
+      <div className="mt-4 flex flex-col justify-start space-y-1 text-start">
         {giftsList.map((gift, index) => (
           <p className="text-white" key={index}>
             {gift.name} - <strong>{gift.quantity}x</strong>
@@ -36,35 +34,39 @@ export function OrderSummary({
         ))}
 
         <hr />
-        <p className="text-white ml-auto">
-          Total: <strong>{CalculationValueAllGifts()}</strong>{' '}
+        <p className="ml-auto text-white">
+          Total: <strong>{CalculationValueAllGifts()}</strong>{" "}
         </p>
       </div>
-      <div className="flex flex-col mobile:flex-row justify-center items-center gap-5 mt-10">
+      <div className="mt-10 flex flex-col items-center justify-center gap-5 mobile:flex-row">
         <Button
-          variant="primary"
-          className="w-full"
+          variant="secondary"
+          className="flex w-1/2 items-center justify-center"
           onClick={handleCloseModalOrderSummary}
           type="button"
         >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            className="lucide lucide-pencil-icon lucide-pencil"
+          >
+            <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+            <path d="m15 5 4 4" />
+          </svg>
           Editar carrinho
-        </Button>
-        <Button
-          variant="primary"
-          className={`w-full bg-white text-black`}
-          arrowIcon={true}
-          type="button"
-          onClick={() => setShowMethodPayment(true)}
-        >
-          Concluir compra
         </Button>
       </div>
 
-      {showMethodPayment && (
-        <div className="flex flex-col mobile:flex-row justify-center items-center gap-5 mt-10">
-          <MethodPayment />
-        </div>
-      )}
+      <div className="mt-4 flex flex-col items-center justify-center gap-5 mobile:flex-row">
+        <MethodPayment />
+      </div>
     </div>
-  )
+  );
 }
