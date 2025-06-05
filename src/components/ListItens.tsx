@@ -46,14 +46,18 @@ export function ListItens() {
               Lista de presentes!
             </h3>
             <p className="text-center text-lg font-medium mobile:text-xl">
-              Sua presença já é o melhor presente! Mas, se quiser nos mimar um pouco mais, criamos duas listas especiais: uma com presentes divertidos e simbólicos, e outra com opções físicas. Fique à vontade para escolher como preferir. Agradecemos de coração por cada gesto de carinho!{" "}
+              Sua presença já é o melhor presente! Mas, se quiser nos mimar um
+              pouco mais, criamos duas listas especiais: uma com presentes
+              divertidos e simbólicos, e outra com opções físicas. Fique à
+              vontade para escolher como preferir. Agradecemos de coração por
+              cada gesto de carinho!{" "}
               <a
-              href="https://www.querodecasamento.com.br/lista-de-casamento/gabi--rodz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/60 underline hover:opacity-80"
+                href="https://www.querodecasamento.com.br/lista-de-casamento/gabi--rodz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/60 underline hover:opacity-80"
               >
-              Veja nossa lista de presentes físicos aqui.
+                Veja nossa lista de presentes físicos aqui.
               </a>
             </p>
           </div>
