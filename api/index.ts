@@ -1,6 +1,7 @@
 // api/index.ts
 
-import app from "./server";
+import app from "../src/api/server";
+
 
 
 export default async function handler(req: unknown, res: unknown) {
