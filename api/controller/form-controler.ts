@@ -1,4 +1,4 @@
-import { prisma } from "../../prisma";
+import { prisma } from "../../src/prisma";
 
 interface AdultHouseHoldParams {
   count: number;
