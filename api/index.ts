@@ -1,10 +1,7 @@
-// api/index.ts
-
+import serverless from "serverless-http";
 import app from "../src/api/server";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const handler = serverless(app as any);
 
-
-export default async function handler(req: unknown, res: unknown) {
-  await app.ready();
-  app.server.emit("request", req, res);
-}
+export default handler;

@@ -20,8 +20,5 @@ app.get("/is-alive", async () => {
   return { message: "ok" };
 });
 
-// app.listen({ port: 3000 }).then((addres) => {
-//   console.log("Server ON", addres);
-// });
 
 export default app;
