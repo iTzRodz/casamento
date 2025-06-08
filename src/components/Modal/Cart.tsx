@@ -43,7 +43,7 @@ export function Cart({ handleCloseModal }: ConfirmationPaymentProps) {
                   <CloseIcon />
                 </span>
 
-                <h1 className="mt-4 text-3xl font-semibold text-white mobile:text-5xl">
+                <h1 className="mt-4 text-3xl font-semibold text-white tablet:text-5xl">
                   Lista de presentes
                 </h1>
                 <ListItensSelected />

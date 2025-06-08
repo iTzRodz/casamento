@@ -4,8 +4,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 
 export function MethodPayment() {
   return (
-    <div className="flex w-full flex-col items-center gap-10">
-      <Tabs defaultValue="pix" className="">
+    <div className="flex w-full flex-col items-center justify-center gap-10">
+      <Tabs
+        defaultValue="pix"
+        className="flex flex-col items-center justify-center"
+      >
         <TabsList className="w-full max-w-52 rounded-lg border border-transparent bg-transparent">
           <TabsTrigger
             value="pix"
