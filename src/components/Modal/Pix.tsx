@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 
 export function Pix() {
   return (
-    <div className="flex max-w-96 flex-col items-center justify-center gap-4">
+    <div className="flex max-w-72 flex-col items-center justify-center gap-4 px-4 tablet:max-w-96">
       <img
         src="/images/pix-qrcode.jpg"
         alt="QRCODE PIX"

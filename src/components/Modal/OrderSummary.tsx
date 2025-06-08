@@ -41,7 +41,7 @@ export function OrderSummary({
       <div className="mt-10 flex flex-col items-center justify-center gap-5 mobile:flex-row">
         <Button
           variant="secondary"
-          className="flex w-1/2 items-center justify-center"
+          className="flex w-full items-center justify-center mobile:w-1/2"
           onClick={handleCloseModalOrderSummary}
           type="button"
         >
