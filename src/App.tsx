@@ -28,7 +28,7 @@ function App() {
   return (
     <main className="flex size-full flex-col gap-20 !antialiased">
       <div className="flex h-screen max-h-screen w-full flex-col bg-zinc-900/50 bg-[url('/images/bg-hero.jpg')] bg-cover bg-fixed bg-center bg-no-repeat bg-blend-overlay">
-        <Header onMenuClick={handleMenuClick}/>
+        <Header onMenuClick={handleMenuClick} />
         <Home />
       </div>
       <div ref={sectionRefs.location}>
