@@ -101,7 +101,7 @@ export function ConfirmPresenca() {
   return (
     <section className=" mx-auto rounded-lg px-5">
       {success ? (
-        <div className="flex w-full flex-col justify-start gap-2 rounded-lg border border-[#1a1a1a] px-8 py-4 lg:w-[1024px]">
+        <div className="mx-auto flex w-full flex-col justify-center gap-2 rounded-lg border border-[#1a1a1a] px-8 py-4 lg:w-[1024px]">
           <h3 className="text-2xl font-bold">
             Muito obrigado por responder ao nosso formulário de casamento!
           </h3>
