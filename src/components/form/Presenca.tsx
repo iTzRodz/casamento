@@ -13,7 +13,7 @@ interface Input {
 
 const validationFormSchema = zod.object({
   isGoToEvent: zod.enum(["1", "0"]),
-  email: zod.string().min(1).email(),
+  phone: zod.string().min(1),
   name: zod.string().min(1),
   adultCount: zod.number(),
   childCount: zod.number(),
@@ -31,7 +31,7 @@ export function ConfirmPresenca() {
   const { register, handleSubmit, watch, setValue } = useForm<FormData>({
     resolver: zodResolver(validationFormSchema),
     defaultValues: {
-      email: "",
+      phone: "",
       isGoToEvent: "1",
       name: "",
       adultCount: 1,
@@ -70,6 +70,8 @@ export function ConfirmPresenca() {
 
   async function handleSubimitForm(data: FormData) {
     setLoading(true);
+    data.phone = data.phone.replace(/\D/g, "");
+
     await saveFormData(data).then((res) => {
       if (res.status !== 201) {
         const { data } = res;
@@ -82,6 +84,19 @@ export function ConfirmPresenca() {
 
       setSuccess(true);
     });
+  }
+
+  function maskPhone(value: string) {
+    return value
+      .replace(/\D/g, "")
+      .replace(/^(\d{2})(\d)/, "($1) $2")
+      .replace(/(\d{5})(\d)/, "$1-$2")
+      .replace(/(-\d{4})\d+?$/, "$1");
+  }
+
+  function handlePhoneChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const masked = maskPhone(e.target.value);
+    setValue("phone", masked);
   }
   return (
     <section className=" mx-auto rounded-lg px-5">
@@ -122,12 +137,17 @@ export function ConfirmPresenca() {
 
               <div className="flex w-full flex-col items-start justify-start gap-2">
                 <span className="text-start text-lg/3 font-semibold ">
-                  E-mail{" "}
+                  Telefone para contato{" "}
                 </span>
                 <input
-                  className="h-12 w-full rounded-lg p-4 text-start outline-none placeholder:text-sm focus:border focus:border-amber-400"
-                  placeholder="exemplo@teste.com"
-                  {...register("email")}
+                  className="h-12 w-full rounded-lg p-4 text-start outline-none placeholder:text-sm placeholder:uppercase focus:border focus:border-amber-400"
+                  placeholder="(xx) xxxxx-xxxx"
+                  type="tel"
+                  title="Formato: (xx) xxxxx-xxxx"
+                  id="phone"
+                  {...register("phone")}
+                  onChange={handlePhoneChange}
+                  maxLength={15}
                 />
               </div>
             </div>
