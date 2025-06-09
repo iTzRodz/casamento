@@ -137,7 +137,7 @@ export function ConfirmPresenca() {
 
               <div className="flex w-full flex-col items-start justify-start gap-2">
                 <span className="text-start text-lg/3 font-semibold ">
-                  Telefone para contato{" "}
+                  Telefone para contato:{" "}
                 </span>
                 <input
                   className="h-12 w-full rounded-lg p-4 text-start outline-none placeholder:text-sm placeholder:uppercase focus:border focus:border-amber-400"
