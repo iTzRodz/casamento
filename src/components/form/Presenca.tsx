@@ -194,7 +194,7 @@ export function ConfirmPresenca() {
                       Adultos adicionais (sem contar você)
                     </label>
                     <p className="m-0 text-left text-sm font-medium text-zinc-500">
-                      (Incluir crianças apartir de 6 anos de idade)
+                      (Incluir crianças a partir de 6 anos de idade)
                     </p>
                   </div>
                   <select
