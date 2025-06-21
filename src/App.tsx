@@ -27,7 +27,7 @@ function App() {
 
   return (
     <main className="flex size-full flex-col gap-20 !antialiased">
-      <div className="flex h-screen max-h-screen w-full flex-col bg-zinc-900/50 bg-[url('/images/bg-hero.jpg')] bg-cover bg-fixed bg-center bg-no-repeat bg-blend-overlay">
+      <div className="flex w-full flex-col bg-zinc-900/50 bg-[url('/images/bg-hero.jpg')] bg-cover bg-fixed bg-center bg-no-repeat bg-blend-overlay mobile:h-screen mobile:max-h-screen">
         <Header onMenuClick={handleMenuClick} />
         <Home />
       </div>

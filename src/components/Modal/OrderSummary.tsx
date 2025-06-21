@@ -14,7 +14,7 @@ export function OrderSummary({
   const { giftsList } = useItems();
 
   return (
-    <div className="flex w-full flex-col justify-start rounded-lg border border-transparent px-8 py-4 shadow">
+    <div className="flex w-full flex-col justify-start rounded-lg border border-transparent px-5 py-4 shadow">
       <span
         className="flex cursor-pointer justify-end "
         onClick={handleCloseModalOrderSummary}
@@ -22,13 +22,13 @@ export function OrderSummary({
         <CloseIcon />
       </span>
 
-      <h3 className="mt-4 text-4xl font-semibold text-white mobile:text-5xl">
+      <h3 className="mt-4 text-2xl font-bold text-white mobile:text-5xl">
         Resumo da compra
       </h3>
 
       <div className="mt-4 flex flex-col justify-start space-y-1 text-start">
         {giftsList.map((gift, index) => (
-          <p className="text-white" key={index}>
+          <p className="text-sm font-normal text-white" key={index}>
             {gift.name} - <strong>{gift.quantity}x</strong>
           </p>
         ))}

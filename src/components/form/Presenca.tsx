@@ -191,10 +191,10 @@ export function ConfirmPresenca() {
                       htmlFor="adultCount"
                       className="text-start text-lg font-semibold leading-5"
                     >
-                      Quantidade de adultos sem incluir você
+                      Adultos adicionais (sem contar você)
                     </label>
-                    <p className="m-0 text-sm font-medium text-zinc-500">
-                      (Incluir crianças apartir de 6 anos de idade)
+                    <p className="m-0 text-left text-sm font-medium text-zinc-500">
+                      (Incluir crianças a partir de 6 anos de idade)
                     </p>
                   </div>
                   <select
