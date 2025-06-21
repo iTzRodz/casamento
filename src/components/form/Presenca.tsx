@@ -62,7 +62,7 @@ export function ConfirmPresenca() {
     if (currentNames.length !== adultCount) {
       const newNames = Array.from(
         { length: adultCount },
-        (_, i) => currentNames[i] || "",
+        (_, i) => currentNames[i] || ""
       );
       setValue("adultHouseHold.names", newNames);
     }
@@ -191,9 +191,9 @@ export function ConfirmPresenca() {
                       htmlFor="adultCount"
                       className="text-start text-lg font-semibold leading-5"
                     >
-                      Quantidade de adultos sem incluir você
+                      Adultos adicionais (sem contar você)
                     </label>
-                    <p className="m-0 text-sm font-medium text-zinc-500">
+                    <p className="m-0 text-left text-sm font-medium text-zinc-500">
                       (Incluir crianças apartir de 6 anos de idade)
                     </p>
                   </div>

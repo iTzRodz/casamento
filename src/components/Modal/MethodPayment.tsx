@@ -32,7 +32,7 @@ export function MethodPayment() {
       </Tabs>
 
       <div className="flex w-full flex-col items-center justify-center gap-4">
-        <h3 className="text-xl font-semibold text-white">
+        <h3 className="w-full text-left text-lg font-semibold text-white mobile:text-xl">
           Atenção: O site não possui integração com plataformas de pagamento.
         </h3>
         <p className="text-base font-medium text-white">
