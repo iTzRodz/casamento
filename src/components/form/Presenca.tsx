@@ -62,7 +62,7 @@ export function ConfirmPresenca() {
     if (currentNames.length !== adultCount) {
       const newNames = Array.from(
         { length: adultCount },
-        (_, i) => currentNames[i] || ""
+        (_, i) => currentNames[i] || "",
       );
       setValue("adultHouseHold.names", newNames);
     }
